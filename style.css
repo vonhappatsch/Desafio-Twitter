@@ -1,0 +1,87 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 20px;
+    font-family: 'Merriweather', serif;
+    font-weight: bolder;
+}
+
+.box {
+    margin-left: 10vw;
+}
+
+.fix {
+    float: left;
+    position: absolute;
+    width: 40%;
+    max-width: 30vw;
+}
+
+.fix2 {
+    float: right;
+    position: relative;
+    width: 60%;
+}
+
+.bio {
+    margin-left: 8vw;
+    line-height: 1.5;
+}
+
+.tweetBody h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.bio h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.bio p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.down {
+    display: block;
+}
+
+.together {
+    display: inline;
+}
+
+.btn {
+    margin: 10px;
+    padding: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background-color: whitesmoke;
+    color: black;
+
+}
+
+.counterDetails {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.tweetText {
+    resize: none;
+    width: 30vw;
+    line-height: 1.5;
+    min-height: 10vh;
+    overflow: hidden;
+    box-sizing: border-box; /* to avoid growing in size with every keydown event */
+    font-family: 'Raleway', sans-serif;
+}
+
+.styledList {
+    list-style-type: none;
+    background-color: aquamarine;
+    max-width: relative;
+    max-height: auto;
+    font-family: 'Raleway', sans-serif;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Twitter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <header>
+                <h1>Twitter</h1>
+            </header>
+            <main class="box">
+                <section class="fix">
+                    <section class="tweetBody">
+                        <h3>Tweets</h3>
+                        <textarea type="text" class="tweetText" id="content" placeholder="" onkeydown="enableButton()"></textarea>
+                        <span class="down"><input type="submit" id="send" class="btn together" value="Tweet" disabled="true" />
+                        <p id="counter" class="counterDetails together">140</p></span>
+                    </section>
+                    <section class="tweetBody2">
+                        <div id="tweet-box">
+                        </div>
+                    </section>
+                </section>
+            </main>
+            <aside>
+                <section class="fix2">
+                    <section class="bio">
+                        <h3>Bio</h3>
+                        <p>Hello world!</p>
+                    </section>
+                </section>
+            </aside>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
