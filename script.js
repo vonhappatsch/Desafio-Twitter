@@ -2,21 +2,19 @@ const button = document.querySelector("#send");
 const tweet = document.querySelector("textarea");
 const tweetBox = document.querySelector("#tweet-box");
 const counter = document.querySelector("#counter");
+const options = {hour: "numeric", minute: "numeric"};
 const chars = 140;
 
 function tweetList(event) {
     let content = tweet.value;
-    let list = document.createElement("li");
-    list.setAttribute("class", "styledList");
+    let listItem = document.createElement("li");
 
-    let options = {hour: "numeric", minute: "numeric"};
     let time = new Date().toLocaleDateString("pt-BR", options);
     time = (time.slice(-5));
-    let listContent = document.createTextNode(time + " - " + content);
-    list.appendChild(listContent);
+    let listItemContent = document.createTextNode(time + " - " + content);
+    listItem.appendChild(listItemContent);
 
-    let tweets = document.getElementById("tweet-box");
-    tweets.insertBefore(list, tweets.childNodes[0]);
+    tweetBox.insertBefore(listItem, tweetBox.childNodes[0]);
     
     clearBox();
     disableButton();

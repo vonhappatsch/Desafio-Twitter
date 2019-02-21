@@ -1,4 +1,4 @@
-.main {
+main {
     display: flex;
     flex-direction: column;
 }
@@ -84,4 +84,6 @@ h1 {
     max-width: relative;
     max-height: auto;
     font-family: 'Raleway', sans-serif;
+    margin: 5px;
+    word-wrap: break-word;
 }
