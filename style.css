@@ -106,8 +106,7 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     background-color: whitesmoke;
-    color: black;
-
+    color: grey;
 }
 
 .counterDetails {
@@ -121,7 +120,8 @@ h1 {
     line-height: 1.5;
     min-height: 10vh;
     overflow: hidden;
-    box-sizing: border-box; /* to avoid growing in size with every keydown event */
+    box-sizing: border-box;
+    /* to avoid growing in size with every keydown event */
     font-family: 'Raleway', sans-serif;
 }
 

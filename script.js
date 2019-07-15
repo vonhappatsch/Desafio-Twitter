@@ -2,7 +2,7 @@ const button = document.querySelector("#send");
 const tweet = document.querySelector("textarea");
 const tweetBox = document.querySelector("#tweet-box");
 const counter = document.querySelector("#counter");
-const options = {hour: "numeric", minute: "numeric"};
+const options = { hour: "numeric", minute: "numeric" };
 const chars = 140;
 
 function tweetList(event) {
@@ -15,21 +15,21 @@ function tweetList(event) {
     listItem.appendChild(listItemContent);
 
     tweetBox.insertBefore(listItem, tweetBox.childNodes[0]);
-    
+
     clearBox();
-    disableButton();
-    clearCounter(); 
+    clearCounter();
+    disableButton()
 }
 
 function clearBox() {
-    document.querySelector("textarea").value = "";
+    tweet.value = "";
 }
 
 function enableButton() {
     if (tweet !== "") {
         button.disabled = false;
         button.setAttribute("style", "color: black;");
-    } 
+    }
 }
 
 function disableButton() {
@@ -42,9 +42,10 @@ function counting() {
     counter.textContent = tracking;
 
     if (tracking <= 0) {
-        button.disabled = true;
+        disableButton();
         counter.style.color = "grey";
-        button.style.color = "grey";
+    } else if (traking > 0) {
+        enableButton();
     } else if (tracking <= 80 && tracking > 70) {
         counter.style.color = "orange"
     } else if (tracking <= 69) {
@@ -54,14 +55,8 @@ function counting() {
     }
 }
 
-function cleaning(event) {
-    if (event.keyCode === 8 && document.activeElement === "") {
-        chars = 140;
-    }
-}
-
 function clearCounter() {
-    document.querySelector("#counter").innerHTML = 140;
+    counter.innerHTML = 140;
 }
 
 function boxSize() {
@@ -69,7 +64,13 @@ function boxSize() {
     tweet.css('height', scroll_height + 'px');
 }
 
+function disabled() {
+    if (tweet.value === "") {
+        disableButton();
+    }
+}
+
 button.addEventListener("click", tweetList);
 tweet.addEventListener("keydown", counting);
-tweet.addEventListener("keypress", cleaning);
+tweet.addEventListener("keyup", disabled);
 tweet.addEventListener("oninput", boxSize);
