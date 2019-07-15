@@ -40,12 +40,8 @@ function disableButton() {
 function counting() {
     let tracking = chars - tweet.value.length;
     counter.textContent = tracking;
-
     if (tracking <= 0) {
         disableButton();
-        counter.style.color = "grey";
-    } else if (traking > 0) {
-        enableButton();
     } else if (tracking <= 80 && tracking > 70) {
         counter.style.color = "orange"
     } else if (tracking <= 69) {
@@ -72,5 +68,6 @@ function disabled() {
 
 button.addEventListener("click", tweetList);
 tweet.addEventListener("keydown", counting);
+tweet.addEventListener("keyup", counting);
 tweet.addEventListener("keyup", disabled);
 tweet.addEventListener("oninput", boxSize);
