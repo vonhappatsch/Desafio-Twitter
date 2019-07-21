@@ -1,73 +1,76 @@
-const button = document.querySelector("#send");
-const tweet = document.querySelector("textarea");
+const button = document.querySelector("button");
+const tweet = document.querySelector("input");
 const tweetBox = document.querySelector("#tweet-box");
 const counter = document.querySelector("#counter");
-const options = { hour: "numeric", minute: "numeric" };
 const chars = 140;
 
-function tweetList(event) {
-    let content = tweet.value;
-    let listItem = document.createElement("li");
+const clearBox = () => tweet.value = "";
 
-    let time = new Date().toLocaleDateString("pt-BR", options);
-    time = (time.slice(-5));
-    let listItemContent = document.createTextNode(time + " - " + content);
-    listItem.appendChild(listItemContent);
+const buttonHandler = () => {
+    tweet.value.length > 0 && tweet.value.length <= 140 ? button.disabled = false : button.disabled = true;
+};
 
-    tweetBox.insertBefore(listItem, tweetBox.childNodes[0]);
+const disabled = () => {
+    if (tweet.value === "") button.disabled = true;
+};
 
-    clearBox();
-    clearCounter();
-    disableButton()
-}
+const clearCounter = () => {
+    counter.textContent = 140;
+    counter.style.color = "black";
+};
 
-function clearBox() {
-    tweet.value = "";
-}
-
-function enableButton() {
-    if (tweet !== "") {
-        button.disabled = false;
-        button.setAttribute("style", "color: black;");
+const boxSize = () => {
+    while (tweet.scrollHeight >= tweet.offsetHeight) {
+        tweet.rows += 1;
     }
+};
+
+const resize = () => {
+    tweet.style.height = "8vh";
 }
 
-function disableButton() {
-    button.disabled = true;
-    button.setAttribute("style", "color: grey;");
-}
-
-function counting() {
+const counting = () => {
+    buttonHandler();
     let tracking = chars - tweet.value.length;
     counter.textContent = tracking;
-    if (tracking <= 0) {
-        disableButton();
-    } else if (tracking <= 80 && tracking > 70) {
-        counter.style.color = "orange"
-    } else if (tracking <= 69) {
+
+    if (tracking < 0) {
+        counter.style.color = "grey";
+    } else if (tracking <= 80 && tracking >= 50) {
+        counter.style.color = "orange";
+    } else if (tracking <= 59) {
         counter.style.color = "red";
     } else {
         counter.style.color = "black";
     }
-}
+};
 
-function clearCounter() {
-    counter.innerHTML = 140;
-}
+const tweetList = () => {
+    let holder = document.createElement("article");
+    let newTweet = document.createElement("p");
+    newTweet.setAttribute("class", "tweets");
+    let dateSpot = document.createElement("p");
+    dateSpot.setAttribute("class", "date");
 
-function boxSize() {
-    tweet.scrollHeight;
-    tweet.css('height', scroll_height + 'px');
-}
+    let content = tweet.value;
+    let tweetContent = document.createTextNode(content);
+    newTweet.appendChild(tweetContent);
 
-function disabled() {
-    if (tweet.value === "") {
-        disableButton();
-    }
-}
+    let date = new Date();
+    let time = date.toLocaleTimeString().slice(0, 5);
+    let dateContent = document.createTextNode(time);
+    dateSpot.appendChild(dateContent);
+
+    tweetBox.appendChild(holder);
+    holder.insertBefore(newTweet, holder.childNodes[0]);
+    holder.insertBefore(dateSpot, holder.childNodes[1]);
+
+    clearBox();
+    clearCounter();
+    disabled();
+    resize();
+};
 
 button.addEventListener("click", tweetList);
-tweet.addEventListener("keydown", counting);
 tweet.addEventListener("keyup", counting);
-tweet.addEventListener("keyup", disabled);
-tweet.addEventListener("oninput", boxSize);
+tweet.addEventListener("keydown", boxSize);
