@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Twitter</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    </head>
-    <body>
-        <div class="main">
-            <header class="top">
-                <span>
-                    <h1>Twitter dos reclamões</h1>
-                    <figure><img class="icon" src="https://i.pinimg.com/564x/72/2d/95/722d9578d7be2bb5781f04b5754d78f7--grumpy-cat-cartoon-grumpy-cat-meme.jpg"></figure>
-            </span>
-            </header>
-            <main class="box">
-                <section class="fix">
-                    <section class="tweetBody">
-                        <h3>Rawr</h3>
-                        <textarea type="text" class="tweetText" id="content" placeholder="rrrreclame aqui... rrrrrr" onkeydown="enableButton()"></textarea>
-                        <span class="down"><input type="submit" id="send" class="btn together" value="Tweet" disabled="true" />
-                        <p id="counter" class="counterDetails together">140</p></span>
-                    </section>
-                    <section class="tweetBody2">
-                        <div id="tweet-box">
-                        </div>
-                    </section>
-                </section>
-            </main>
-            <aside>
-                <section class="fix2">
-                    <section class="bio">
-                        <h3>Meow</h3>
-                        <figure><img class="meow" src="https://media.giphy.com/media/cAPLOfcr3k2pW/giphy.gif"></figure>
-                        <p>DOM manipulado com sucesso!</p>
-                    </section>
-                </section>
-            </aside>
-        </div>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Sailor Warriors Secret Diaries</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:300i,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row main justify-content-center">
+            <div class="col-sm-12 box box-top">
+                <h1 class="col-sm-12 text-center">Sailor Tweeting</h1>
+            </div>
+
+            <section class="col-xl-4 col-lg-4 col-md-6 col-sm-12 tweeter">
+
+                <textarea type="text" class="tweet-text form-control form-control-sm" id="content" placeholder=" "></textarea>
+
+                <span class=" "><button id="send " class="btn btn-outline-dark" value="Tweet" disabled="true ">tweet</button>
+
+                <p id="counter" class="count">140</p></span>
+                <p class="sub text-center ">Nem sempre é fácil ser uma guerreira: <br /> bem-vinda ao seu diário descartável!</p>
+            </section>
+        </header>
+
+        <main class="row ">
+            <section class="col-xl-8 col-lg-8 col-md-6 col-sm-12 tweet-body ">
+
+            </section>
+        </main>
+    </div>
+
+    <script src="/__/firebase/6.3.1/firebase-app.js"></script>
+    <!--<script></script>-->
+    <script src="/__/firebase/init.js"></script>
+    <script src="script.js "></script>
+</body>
+
 </html>

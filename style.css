@@ -1,138 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+    background-image: url('https://i.pinimg.com/originals/91/98/d8/9198d8d85e9a95b4aeb8aa653f8f8bb0.jpg');
+    min-height: 812px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(40, 165, 165);
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    background-color: pink;
-    min-width: 600px;
-    width: auto;
-    min-height: 625px;
-    height: auto;
+
+/* descobrir como centralizar ele e o box - colocar efeito de sombra */
+
+.tweeter {
+    background-color: beige;
+    padding: 4vh 2vw 2vh 4vw;
+    width: 96vw;
 }
 
-.top {
-    align-items: center;
-    align-content: space-around;
-    background-color: white;
-    height: 28vh;
+.sub {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 5vw;
+    margin-top: 2.8vh;
+    padding: 0vh 2vw 0vh 2vw;
 }
 
-h1 {
-    font-family: 'Merriweather', serif;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 16vh;
-}
 
-.icon {
-    width: 12%;
-    position: relative;
-    float: left;
-    margin-left: 21vw;
-    margin-top: -26vh;
-}
+/* colocar efeito de sombra normal mas bem leve */
 
 .box {
-    margin-left: 10vw;
+    height: 5vh;
+    width: 100vw;
+    background-color: rgb(230, 218, 218);
+    border: 1px rgb(31, 28, 28) solid;
 }
 
-.fix {
-    float: left;
-    position: absolute;
-    width: 40%;
-    max-width: 30vw;
+.box-top {
+    margin-top: 1vh;
 }
 
-.fix2 {
-    float: right;
-    position: relative;
-    width: 60%;
+.box-top h1 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    font-size: 6.5vw;
+    margin-top: 0.35vh;
 }
 
-.bio {
-    margin-left: 8vw;
+.tweet-text {
+    box-sizing: border-box;
+    width: 87vw;
     line-height: 1.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 8vh;
-}
-
-.tweetBody {
-    margin-top: 8vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.tweetText {
-    margin-top: 3vh;
-}
-
-.meow {
-    margin-top: 3vh;
-}
-
-.tweetBody h3 {
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
-    text-align: center;
-}
-
-.bio h3 {
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
-}
-
-.bio p {
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-}
-
-.down {
-    display: block;
-}
-
-.together {
-    display: inline;
+    min-height: 8vh;
+    overflow: hidden;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    margin-bottom: 1vh;
 }
 
 .btn {
-    margin: 10px;
-    padding: 8px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    background-color: whitesmoke;
-    color: grey;
+    background-color: rgb(40, 165, 165);
+    color: rgb(44, 40, 40);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    display: inline;
+    margin-right: 3vw;
 }
 
-.counterDetails {
-    margin-left: 10px;
-    font-size: 14px;
+.count {
+    color: rgb(44, 40, 40);
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    display: inline;
 }
 
-.tweetText {
-    resize: none;
-    width: 30vw;
-    line-height: 1.5;
-    min-height: 10vh;
-    overflow: hidden;
-    box-sizing: border-box;
-    /* to avoid growing in size with every keydown event */
-    font-family: 'Raleway', sans-serif;
+.tweet-body {
+    overflow-y: auto;
 }
 
-li {
-    list-style-type: none;
-    background-color: black;
-    color: whitesmoke;
-    max-width: relative;
+.tweets {
+    max-width: 60vh;
     max-height: auto;
-    font-family: 'Raleway', sans-serif;
-    margin: 10px;
     word-wrap: break-word;
-    padding: 8px;
+    background-color: rgb(247, 236, 250);
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    padding: 2vw;
+    border: 1.5px rgb(27, 26, 26) solid;
 }
+
+.date {
+    background-color: rgb(243, 243, 204);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    padding: 2vw;
+    border: 1px rgb(27, 26, 26) solid;
+}
+
+
+/* colocar efeito de sombra chapada que nem eu gosto e descobrir como fazer só ele rolar como no pokemon pra versao mobile */
+
+.holder {
+    background-color: rgb(230, 218, 218);
+    padding: 2vh 2vw 2vh 2vw;
+    margin: 2vh 0vw 2vh 0vw;
+    border: 1px rgb(27, 26, 26) solid;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    ...
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    ...
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    ...
+}
+
+
+/* holder é a caixa que segura o texto do tweet e a data do tweet e fica dentro da tweetbody e tweetbox
+tweetBody: fica em volta do tweet-box? ja aparece antes de qualquer tweet
+tweet-body: sempre vai aparecer sem ser o primeiro tweet (entre um e outro) meio que separando entao melhor ser da cor do background)
+fazer o desktop e tablet como duas colunas e com um fundo diferente mas basicamente a mesma coisa
+falta fazer o form de cadastro e login para celular e tablet/desktop */

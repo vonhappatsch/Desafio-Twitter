@@ -1,22 +1,11 @@
 const button = document.querySelector("button");
-const tweet = document.querySelector("input");
-const tweetBox = document.querySelector("#tweet-box");
+const tweet = document.querySelector("textarea");
+const tweetBody = document.querySelector(".tweet-body");
 const counter = document.querySelector("#counter");
 const chars = 140;
 
-const clearBox = () => tweet.value = "";
-
 const buttonHandler = () => {
     tweet.value.length > 0 && tweet.value.length <= 140 ? button.disabled = false : button.disabled = true;
-};
-
-const disabled = () => {
-    if (tweet.value === "") button.disabled = true;
-};
-
-const clearCounter = () => {
-    counter.textContent = 140;
-    counter.style.color = "black";
 };
 
 const boxSize = () => {
@@ -25,12 +14,19 @@ const boxSize = () => {
     }
 };
 
-const resize = () => {
-    tweet.style.height = "8vh";
-}
+const disabled = () => {
+    if (tweet.value === "") button.disabled = true;
+};
+const clearBox = () => tweet.value = "";
+
+const clearCounter = () => {
+    counter.textContent = 140;
+    counter.style.color = "black";
+};
 
 const counting = () => {
     buttonHandler();
+
     let tracking = chars - tweet.value.length;
     counter.textContent = tracking;
 
@@ -47,6 +43,7 @@ const counting = () => {
 
 const tweetList = () => {
     let holder = document.createElement("article");
+    holder.setAttribute("class", "holder");
     let newTweet = document.createElement("p");
     newTweet.setAttribute("class", "tweets");
     let dateSpot = document.createElement("p");
@@ -61,14 +58,13 @@ const tweetList = () => {
     let dateContent = document.createTextNode(time);
     dateSpot.appendChild(dateContent);
 
-    tweetBox.appendChild(holder);
+    tweetBody.appendChild(holder);
     holder.insertBefore(newTweet, holder.childNodes[0]);
     holder.insertBefore(dateSpot, holder.childNodes[1]);
 
     clearBox();
     clearCounter();
     disabled();
-    resize();
 };
 
 button.addEventListener("click", tweetList);
