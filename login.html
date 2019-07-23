@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Sailor Warriors Secret Diaries</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:300i,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+    <script src="init-firebase.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center top">Sailor Tweeting</h1>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3 class="text-center sub">Login</h3>
+                <div class="form-group">
+                    <label class="fields control-label">Email:</label>
+                    <input type="text" id="signInEmail" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label class="fields control-label">Senha:</label>
+                    <input type="password" id="signInPassword" class="form-control" />
+                </div>
+                <div class="form-group justify-content-between d-flex">
+                    <button class="btn btn-outline-dark btn-md p-2" id="enter">Entrar</button>
+                    <a href="register.html" class="register ml-auto p-2">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

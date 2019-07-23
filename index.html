@@ -9,36 +9,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Lato:300i,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+    <script src="init-firebase.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container float-xl-left">
         <header class="row main justify-content-center">
-            <div class="col-sm-12 box box-top">
-                <h1 class="col-sm-12 text-center">Sailor Tweeting</h1>
+            <div class="col-sm-12 col-lg-12 col-md-12 col-lg-6 col-xl-6 box box-top">
+                <h1 class="text-center">Sailor Tweeting</h1>
             </div>
-
-            <section class="col-xl-4 col-lg-4 col-md-6 col-sm-12 tweeter">
-
-                <textarea type="text" class="tweet-text form-control form-control-sm" id="content" placeholder=" "></textarea>
-
-                <span class=" "><button id="send " class="btn btn-outline-dark" value="Tweet" disabled="true ">tweet</button>
-
-                <p id="counter" class="count">140</p></span>
-                <p class="sub text-center ">Nem sempre é fácil ser uma guerreira: <br /> bem-vinda ao seu diário descartável!</p>
-            </section>
         </header>
-
-        <main class="row ">
-            <section class="col-xl-8 col-lg-8 col-md-6 col-sm-12 tweet-body ">
-
+    </div>
+    <div class="container float-xl-left">
+        <div class="row justify-content-center">
+            <section class="col-xl-6 col-lg-6 col-md-10 col-sm-10 tweeter">
+                <textarea type="text" class="tweet-text form-control form-control-sm" id="content" placeholder="aqui você pode resmungar em nome da lua"></textarea>
+                <span class=""><button id="send" class="btn btn-outline-dark" value="Tweet" disabled="true">partiu</button>
+                    <p id="counter" class="count">140</p></span>
+                <p class="sub text-center">Nem sempre é fácil ser uma guerreira: <br /> bem-vinda ao seu diário descartável!</p>
+                <div class="row justify-content-center">
+                    <button id="exit" class="btn btn-outline-danger btn-sm">sair</button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="container float-xl-right">
+        <main class="row justify-content-center">
+            <section class="col-xl-6 col-lg-6 col-md-12 col-sm-12 tweet-body">
             </section>
         </main>
     </div>
-
-    <script src="/__/firebase/6.3.1/firebase-app.js"></script>
-    <!--<script></script>-->
-    <script src="/__/firebase/init.js"></script>
+    <script src="logout.js"></script>
     <script src="script.js "></script>
 </body>
 

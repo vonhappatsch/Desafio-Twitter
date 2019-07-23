@@ -1,130 +1,265 @@
-body {
-    background-image: url('https://i.pinimg.com/originals/91/98/d8/9198d8d85e9a95b4aeb8aa653f8f8bb0.jpg');
-    min-height: 812px;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgb(40, 165, 165);
-}
-
-
-/* descobrir como centralizar ele e o box - colocar efeito de sombra */
-
-.tweeter {
-    background-color: beige;
-    padding: 4vh 2vw 2vh 4vw;
-    width: 96vw;
-}
-
-.sub {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 5vw;
-    margin-top: 2.8vh;
-    padding: 0vh 2vw 0vh 2vw;
-}
-
-
-/* colocar efeito de sombra normal mas bem leve */
-
-.box {
-    height: 5vh;
-    width: 100vw;
-    background-color: rgb(230, 218, 218);
-    border: 1px rgb(31, 28, 28) solid;
-}
-
-.box-top {
-    margin-top: 1vh;
-}
-
-.box-top h1 {
-    font-family: 'Inconsolata', monospace;
-    font-weight: 700;
-    font-size: 6.5vw;
-    margin-top: 0.35vh;
-}
-
-.tweet-text {
-    box-sizing: border-box;
-    width: 87vw;
-    line-height: 1.5;
-    min-height: 8vh;
-    overflow: hidden;
-    font-family: 'Inconsolata', monospace;
-    font-weight: 400;
-    margin-bottom: 1vh;
-}
-
-.btn {
-    background-color: rgb(40, 165, 165);
-    color: rgb(44, 40, 40);
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    display: inline;
-    margin-right: 3vw;
-}
-
-.count {
-    color: rgb(44, 40, 40);
-    font-family: 'Inconsolata', monospace;
-    font-weight: 700;
-    display: inline;
-}
-
-.tweet-body {
-    overflow-y: auto;
-}
-
-.tweets {
-    max-width: 60vh;
-    max-height: auto;
-    word-wrap: break-word;
-    background-color: rgb(247, 236, 250);
-    font-family: 'Inconsolata', monospace;
-    font-weight: 400;
-    padding: 2vw;
-    border: 1.5px rgb(27, 26, 26) solid;
-}
-
-.date {
-    background-color: rgb(243, 243, 204);
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    padding: 2vw;
-    border: 1px rgb(27, 26, 26) solid;
-}
-
-
-/* colocar efeito de sombra chapada que nem eu gosto e descobrir como fazer só ele rolar como no pokemon pra versao mobile */
-
-.holder {
-    background-color: rgb(230, 218, 218);
-    padding: 2vh 2vw 2vh 2vw;
-    margin: 2vh 0vw 2vh 0vw;
-    border: 1px rgb(27, 26, 26) solid;
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-    ...
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-    ...
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    ...
-}
-
-
-/* holder é a caixa que segura o texto do tweet e a data do tweet e fica dentro da tweetbody e tweetbox
-tweetBody: fica em volta do tweet-box? ja aparece antes de qualquer tweet
-tweet-body: sempre vai aparecer sem ser o primeiro tweet (entre um e outro) meio que separando entao melhor ser da cor do background)
-fazer o desktop e tablet como duas colunas e com um fundo diferente mas basicamente a mesma coisa
-falta fazer o form de cadastro e login para celular e tablet/desktop */
+                                                body {
+                                                background-image: url('https://i.pinimg.com/originals/91/98/d8/9198d8d85e9a95b4aeb8aa653f8f8bb0.jpg');
+                                                min-height: 812px;
+                                                background-attachment: fixed;
+                                                background-position: center;
+                                                background-size: cover;
+                                                background-repeat: no-repeat;
+                                                background-color: rgb(40, 165, 165);
+                                            }
+                                            
+                                            .box {
+                                                height: 5vh;
+                                                width: 100vw;
+                                                background-color: rgb(230, 218, 218);
+                                                border: 1px rgb(31, 28, 28) solid;
+                                                justify-content: center;
+                                            }
+                                            
+                                            .box-top {
+                                                margin-top: 1vh;
+                                            }
+                                            
+                                            .box-top h1 {
+                                                font-family: 'Inconsolata', monospace;
+                                                color: rgb(22, 21, 21);
+                                                font-weight: 700;
+                                                font-size: 6.5vw;
+                                                margin-top: 0.35vh;
+                                            }
+                                            
+                                            .tweeter {
+                                                background-color: beige;
+                                                padding: 4vh 2vw 2vh 4vw;
+                                                width: 94vw;
+                                                justify-content: center;
+                                            }
+                                            
+                                            .sub {
+                                                font-family: 'Lato', sans-serif;
+                                                font-weight: 300;
+                                                font-style: italic;
+                                                font-size: 5vw;
+                                                margin-top: 2.8vh;
+                                                padding: 0vh 2vw 0vh 2vw;
+                                            }
+                                            
+                                            .tweet-text {
+                                                box-sizing: border-box;
+                                                width: 87vw;
+                                                line-height: 1.5;
+                                                min-height: 8vh;
+                                                overflow: hidden;
+                                                font-family: 'Inconsolata', monospace;
+                                                font-weight: 400;
+                                                margin-bottom: 1vh;
+                                            }
+                                            
+                                            .btn {
+                                                background-color: rgb(40, 165, 165);
+                                                color: rgb(44, 40, 40);
+                                                font-family: 'Lato', sans-serif;
+                                                font-weight: 700;
+                                                display: inline;
+                                                margin-right: 3vw;
+                                            }
+                                            
+                                            .count {
+                                                color: rgb(44, 40, 40);
+                                                font-family: 'Inconsolata', monospace;
+                                                font-weight: 700;
+                                                display: inline;
+                                            }
+                                            
+                                            #exit {
+                                                margin: 0;
+                                            }
+                                            
+                                            .tweet-body {
+                                                overflow-y: auto;
+                                            }
+                                            
+                                            .tweets {
+                                                max-width: 60vh;
+                                                max-height: auto;
+                                                word-wrap: break-word;
+                                                background-color: rgb(247, 236, 250);
+                                                font-family: 'Inconsolata', monospace;
+                                                font-weight: 400;
+                                                padding: 2vw;
+                                                border: 1.5px rgb(27, 26, 26) solid;
+                                            }
+                                            
+                                            .date {
+                                                background-color: rgb(243, 243, 204);
+                                                font-family: 'Lato', sans-serif;
+                                                font-weight: 700;
+                                                padding: 2vw;
+                                                border: 1px rgb(27, 26, 26) solid;
+                                            }
+                                            
+                                            .holder {
+                                                background-color: rgb(230, 218, 218);
+                                                padding: 4vh 2vw 2vh 2vw;
+                                                margin: 2vh 0vw 2vh 0vw;
+                                                border: 1px rgb(27, 26, 26) solid;
+                                            }
+                                            
+                                            @media (min-width: 768px) and (max-width: 900px) {
+                                                .box {
+                                                    height: 8vh;
+                                                    width: 100vw;
+                                                    background-color: rgb(230, 218, 218);
+                                                    border: 1px rgb(31, 28, 28) solid;
+                                                }
+                                                .box-top h1 {
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 700;
+                                                    font-size: 5vw;
+                                                }
+                                                .box-top {
+                                                    margin-top: 2.5vh;
+                                                }
+                                                .tweeter {
+                                                    background-color: beige;
+                                                    padding: 2vh 2vw 2vh 4vw;
+                                                    width: 100vw;
+                                                }
+                                                .sub {
+                                                    font-family: 'Lato', sans-serif;
+                                                    font-weight: 300;
+                                                    font-style: italic;
+                                                    font-size: 4vw;
+                                                    margin-top: 2.8vh;
+                                                    padding: 0vh 2vw 0vh 2vw;
+                                                }
+                                                .tweet-text {
+                                                    box-sizing: border-box;
+                                                    width: 69vw;
+                                                    line-height: 1.5;
+                                                    min-height: 8vh;
+                                                    overflow: hidden;
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 400;
+                                                    font-size: 3vw;
+                                                    margin-bottom: 1vh;
+                                                }
+                                                .tweets {
+                                                    max-width: 96vh;
+                                                    max-height: auto;
+                                                    word-wrap: break-word;
+                                                    background-color: rgb(247, 236, 250);
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 400;
+                                                    padding: 2vw;
+                                                    border: 1.5px rgb(27, 26, 26) solid;
+                                                }
+                                            }
+                                            
+                                            @media (min-width: 992px) and (max-width: 1200px) {
+                                                .box {
+                                                    height: 9vh;
+                                                    width: 100vw;
+                                                    background-color: rgb(230, 218, 218);
+                                                    border: 1px rgb(31, 28, 28) solid;
+                                                }
+                                                .box-top {
+                                                    margin-top: 2.5vh;
+                                                }
+                                                .box-top h1 {
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 700;
+                                                    font-size: 7.5vw;
+                                                }
+                                                .tweeter {
+                                                    background-color: beige;
+                                                    padding: 2vh 2vw 2vh 4vw;
+                                                    width: 100vw;
+                                                }
+                                                .sub {
+                                                    font-family: 'Lato', sans-serif;
+                                                    font-weight: 300;
+                                                    font-style: italic;
+                                                    font-size: 4.5vw;
+                                                    margin-top: 2.8vh;
+                                                    padding: 0vh 2vw 0vh 2vw;
+                                                }
+                                                .tweet-text {
+                                                    box-sizing: border-box;
+                                                    width: 67vw;
+                                                    line-height: 1.5;
+                                                    min-height: 8vh;
+                                                    overflow: hidden;
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 400;
+                                                    margin-bottom: 1vh;
+                                                }
+                                            }
+                                            
+                                            @media (min-width: 1200px) {
+                                                body {
+                                                    background-image: url('https://i.pinimg.com/originals/1e/36/6c/1e366c26c6a4c6b383d084e3e56a2887.jpg');
+                                                    min-height: 100vh;
+                                                    background-attachment: fixed;
+                                                    background-position: center;
+                                                    background-size: cover;
+                                                    background-repeat: no-repeat;
+                                                }
+                                                .box {
+                                                    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/106230098544920799/2DCA0C706EB618074A749483E71B648BCA14A931/');
+                                                    background-position: bottom;
+                                                    background-size: cover;
+                                                    height: 20vh;
+                                                    width: 80vw;
+                                                    background-color: rgb(230, 218, 218);
+                                                    border: 1px rgb(31, 28, 28) solid;
+                                                }
+                                                .box-top h1 {
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 700;
+                                                    font-size: 5vw;
+                                                }
+                                                .box-top {
+                                                    margin-top: 3vh;
+                                                }
+                                                .tweeter {
+                                                    background-color: beige;
+                                                    padding: 2vh 2vw 2vh 4vw;
+                                                    width: 60vw;
+                                                }
+                                                .sub {
+                                                    font-family: 'Lato', sans-serif;
+                                                    font-weight: 300;
+                                                    font-style: italic;
+                                                    font-size: 1.5vw;
+                                                    margin-top: 2.8vh;
+                                                    padding: 0vh 2vw 0vh 2vw;
+                                                }
+                                                .tweet-text {
+                                                    box-sizing: border-box;
+                                                    width: 33vw;
+                                                    line-height: 1.5;
+                                                    min-height: 8vh;
+                                                    overflow: hidden;
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 400;
+                                                    margin-bottom: 1vh;
+                                                }
+                                                .tweets {
+                                                    max-width: 80vh;
+                                                    max-height: auto;
+                                                    word-wrap: break-word;
+                                                    background-color: rgb(247, 236, 250);
+                                                    font-family: 'Inconsolata', monospace;
+                                                    font-weight: 400;
+                                                    padding: 2vw;
+                                                    border: 1.5px rgb(27, 26, 26) solid;
+                                                    font-size: 4vh;
+                                                }
+                                                .date {
+                                                    background-color: rgb(243, 243, 204);
+                                                    font-family: 'Lato', sans-serif;
+                                                    font-weight: 700;
+                                                    padding: 2vw;
+                                                    border: 1px rgb(27, 26, 26) solid;
+                                                }

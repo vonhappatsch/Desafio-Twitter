@@ -1,0 +1,42 @@
+@media (min-width: 1200px) {
+    body {
+        background-image: url('');
+    }
+}
+
+body {
+    background-image: url('https://i.pinimg.com/originals/99/b3/1c/99b31c42295b75e5bc0bb2eaf2efc544.jpg');
+    min-height: 812px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top {
+    margin-top: 12vh;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    font-size: 8vh;
+    color: rgb(17, 17, 17);
+}
+
+.sub {
+    color: rgb(243, 229, 229);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.fields {
+    color: rgb(243, 229, 229);
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+}
+
+.register {
+    color: rgb(248, 232, 232);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 2vh;
+}
